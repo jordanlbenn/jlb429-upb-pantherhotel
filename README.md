@@ -57,18 +57,6 @@ panther_hotel/
 │
 └── README.md
 ```
----
-
-## 🗄️ Database Design
-
-### Booking Table
-
-* id (Primary Key)
-* room_id (Foreign Key)
-* customer_name
-* booking_date
-
----
 
 ## Core Functionality
 
@@ -95,11 +83,10 @@ Admins (managers) can see room listings and monitor all bookings.
 ### Manager Dashboard
 <img width="1365" height="719" alt="manager_dashboard" src="https://github.com/user-attachments/assets/cd6e7c10-720f-4714-88c4-63a0cd835adf" />
 
-
 ---
 
-Jordan Bennett
-Dr. Ken Wang
+### Jordan Bennett
+<br>
 CIST1310 | System Analysis & Design
 
 ---
