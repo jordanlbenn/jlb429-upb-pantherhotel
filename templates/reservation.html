@@ -1,48 +1,131 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <container class="welcome-container">
-        <h1>Panther Hotel Room Reservation</h1>
-        <p>Please fill out the form below to reserve your room.</p>
-        <form action="/reserve" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="checkin">Check-in Date:</label><br>
-            <input type="text" id="checkin" name="checkin" required><br><br>
-            <label for="checkout">Check-out Date:</label><br>
-            <input type="text" id="checkout" name="checkout" required><br><br>
-            <label for="room_type">Room Type:</label><br>
-            <input type="text" id="room_type" name="room_type" required><br><br>
-            <a href="templates\confirmation_page.html" class="btn">Submit</a>
-        </form>
-    </container>   
+    <meta charset="UTF-8">
+    <title>Panter Hotel - Reservation</title>
+
     <style>
-        body {      
+        body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            height: 100vh;
+
+        }
+        
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
         }
-        .welcome-container {
-            background-color: #fff;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .card-box {
+            width: 400px;
+            padding: 35px;
+            border-radius: 16px;
+
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
             text-align: center;
-        }
-        .welcome-container h1 {
             margin-bottom: 20px;
         }
-        .btn {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0e0279;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
         }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input, select {
+            background: rgba(255,255,255,0.9);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+
+            background: #0e0279;
+            color: white;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a0db3;
+            transform: scale(1.03);
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="card-box">
+
+        <h2>Make a Reservation</h2>
+
+        <form method="POST">
+
+            <label>Name</label>
+            <input type="text" name="name" required>
+
+            <label>Room Type</label>
+            <select name="room_type" required>
+                <option value="Single">Single Room</option>
+                <option value="Double">Double Room</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <label>Check-In Date</label>
+            <input type="date" name="checkin" required>
+
+            <label>Check-Out Date</label>
+            <input type="date" name="checkout" required>
+
+            <button type="submit" class="btn">Confirm Booking</button>
+
+        </form>
+
+        <a href="/" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
