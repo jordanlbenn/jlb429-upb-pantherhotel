@@ -1,0 +1,48 @@
+<html>
+<head>
+    <container class="welcome-container">
+        <h1>Panther Hotel Room Reservation</h1>
+        <p>Please fill out the form below to reserve your room.</p>
+        <form action="/reserve" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="checkin">Check-in Date:</label><br>
+            <input type="text" id="checkin" name="checkin" required><br><br>
+            <label for="checkout">Check-out Date:</label><br>
+            <input type="text" id="checkout" name="checkout" required><br><br>
+            <label for="room_type">Room Type:</label><br>
+            <input type="text" id="room_type" name="room_type" required><br><br>
+            <a href="templates\confirmation_page.html" class="btn">Submit</a>
+        </form>
+    </container>   
+    <style>
+        body {      
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .welcome-container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .welcome-container h1 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0e0279;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
