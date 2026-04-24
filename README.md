@@ -45,40 +45,21 @@ This project demonstrates core concepts in **web development, backend design, an
 panther_hotel/
 │
 ├── app.py                  # Main application entry point
-├── config.py               # Configuration settings
-├── requirements.txt        # Dependencies
 │
 ├── /templates              # HTML templates
-│   ├── base.html
-│   ├── index.html
-│   ├── rooms.html
-│   ├── booking.html
-│   ├── admin.html
-│
-├── /static                 # CSS and static files
-│   └── style.css
+│   ├── room_list.html
+│   ├── reservation.html
+│   ├── welcome.html
+|   ├── confirmation_page.html
 │
 ├── /models                 # Database models
-│   ├── db.py
-│   ├── room.py
-│   ├── booking.py
-│
-├── /routes                 # Application routes
-│   ├── main_routes.py
-│   ├── admin_routes.py
+│   ├── hotel.db
 │
 └── README.md
 ```
 ---
 
 ## 🗄️ Database Design
-
-### Room Table
-
-* id (Primary Key)
-* type (Single, Double, Suite)
-* price
-* availability
 
 ### Booking Table
 
@@ -91,23 +72,29 @@ panther_hotel/
 
 ## Core Functionality
 
-### Room Browsing
-
-Users can view all available rooms dynamically retrieved from the database.
-
 ### Booking System
 
 Users can select a room and submit a booking request, which is stored in the database.
 
 ### Admin Controls
 
-Admins (managers) can manage room listings and monitor all bookings.
+Admins (managers) can see room listings and monitor all bookings.
 
 ---
 
 ## 📸 Screenshots
+### Welcome Screen 
+<img width="1365" height="719" alt="home_screen" src="https://github.com/user-attachments/assets/79856376-5d73-4cdc-9eb6-ca1e5948a574" />
 
-*(Add screenshots here if available)*
+### Reservation Screen
+<img width="1365" height="721" alt="reservation_screen" src="https://github.com/user-attachments/assets/6cb4945f-2819-49dc-bdfe-c12a8a27af83" />
+
+### Booking Confirmed Screen Shot
+<img width="1365" height="720" alt="booking_confirmed" src="https://github.com/user-attachments/assets/1499cd68-8cf9-4267-b731-b1236a1fef75" />
+
+### Manager Dashboard
+<img width="1365" height="719" alt="manager_dashboard" src="https://github.com/user-attachments/assets/cd6e7c10-720f-4714-88c4-63a0cd835adf" />
+
 
 ---
 
